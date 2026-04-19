@@ -1,14 +1,16 @@
 import { ArrowUpRight, Code2, Palette, ShoppingCart, Smartphone, Sparkles } from "lucide-react";
+import project1 from "@/assets/project-1.jpg";
 
 const projects = [
   {
     id: 1,
-    title: "Plataforma SaaS",
-    description: "Dashboard completo com analytics em tempo real, autenticação e billing integrado.",
-    tags: ["React", "TypeScript", "Stripe"],
+    title: "Sovereign Strategy",
+    description: "Landing page premium para consultoria de patrimônio, com design responsivo e identidade sofisticada em dark mode.",
+    tags: ["Next.js", "Tailwind", "Responsive"],
     icon: Sparkles,
     className: "md:col-span-2 md:row-span-2",
     gradient: "from-primary/30 via-primary/10 to-transparent",
+    image: project1,
   },
   {
     id: 2,
@@ -72,9 +74,18 @@ export function ProjectsBento() {
                 key={project.id}
                 className={`group relative overflow-hidden rounded-3xl border border-foreground/10 bg-foreground/[0.03] p-6 transition-all duration-500 hover:border-foreground/20 hover:bg-foreground/[0.06] md:p-8 ${project.className}`}
               >
+                {project.image && (
+                  <div
+                    className="absolute inset-0 bg-cover bg-center opacity-40 transition-all duration-700 group-hover:scale-105 group-hover:opacity-60"
+                    style={{ backgroundImage: `url(${project.image})` }}
+                  />
+                )}
                 <div
                   className={`absolute inset-0 bg-gradient-to-br ${project.gradient} opacity-60 transition-opacity duration-500 group-hover:opacity-100`}
                 />
+                {project.image && (
+                  <div className="absolute inset-0 bg-gradient-to-t from-background via-background/60 to-transparent" />
+                )}
                 <div className="absolute -right-16 -top-16 h-48 w-48 rounded-full bg-foreground/5 blur-3xl transition-all duration-700 group-hover:scale-150" />
 
                 <div className="relative z-10 flex h-full flex-col justify-between">
