@@ -1,14 +1,16 @@
 import { ArrowUpRight, Code2, Palette, ShoppingCart, Smartphone, Sparkles } from "lucide-react";
+import project1 from "@/assets/project-1.jpg";
 
 const projects = [
   {
     id: 1,
-    title: "Plataforma SaaS",
-    description: "Dashboard completo com analytics em tempo real, autenticação e billing integrado.",
-    tags: ["React", "TypeScript", "Stripe"],
+    title: "Sovereign Strategy",
+    description: "Landing page premium para consultoria de patrimônio, com design responsivo e identidade sofisticada em dark mode.",
+    tags: ["Next.js", "Tailwind", "Responsive"],
     icon: Sparkles,
     className: "md:col-span-2 md:row-span-2",
     gradient: "from-primary/30 via-primary/10 to-transparent",
+    image: project1,
   },
   {
     id: 2,
