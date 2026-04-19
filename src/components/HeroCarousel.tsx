@@ -5,6 +5,8 @@ import { ChevronLeft, ChevronRight, Play, Info } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import heroSlide from "@/assets/hero-slide.png";
 import heroSlide1 from "@/assets/hero-slide-1.png";
+import heroSlide3 from "@/assets/hero-slide-3.jpg";
+import heroSlide4 from "@/assets/hero-slide-4.jpg";
 
 const slides = [
   {
@@ -14,17 +16,32 @@ const slides = [
     subtitle:
       "Full Stack Developer · UI/UX Designer · Criando soluções digitais que conectam pessoas e negócios.",
   },
-  ...Array.from({ length: 4 }, (_, i) => ({
-    id: i + 2,
+  {
+    id: 2,
     image: heroSlide,
-    title: ["Designer UI/UX", "Soluções Digitais", "Do Design ao Deploy", "Transformando Ideias"][i],
-    subtitle: [
-      "Interfaces modernas, intuitivas e centradas no usuário.",
-      "Aplicações escaláveis com tecnologia de ponta.",
-      "Fluxo completo: design, código e entrega contínua.",
-      "Vamos construir algo incrível juntos.",
-    ][i],
-  })),
+    title: "Designer UI/UX",
+    subtitle: "Interfaces modernas, intuitivas e centradas no usuário.",
+  },
+  {
+    id: 3,
+    image: heroSlide3,
+    title: "Código que Respira Design",
+    subtitle:
+      "Frontend Developer · Design System Lover · Onde pixels e lógica se encontram.",
+  },
+  {
+    id: 4,
+    image: heroSlide4,
+    title: "Sua Loja Online Completa",
+    subtitle:
+      "E-commerce Developer · Integrações de Pagamento · Soluções escaláveis para vender mais.",
+  },
+  {
+    id: 5,
+    image: heroSlide,
+    title: "Transformando Ideias",
+    subtitle: "Vamos construir algo incrível juntos.",
+  },
 ];
 
 export function HeroCarousel() {
