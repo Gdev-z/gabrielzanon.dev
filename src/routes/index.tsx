@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { HeroCarousel } from "@/components/HeroCarousel";
+import { ProjectsBento } from "@/components/ProjectsBento";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -18,6 +19,7 @@ function Index() {
   return (
     <main className="min-h-screen bg-background">
       <HeroCarousel />
+      <ProjectsBento />
     </main>
   );
 }
