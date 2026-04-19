@@ -11,16 +11,16 @@ import heroSlide4 from "@/assets/hero-slide-4.jpg";
 const slides = [
   {
     id: 1,
+    image: heroSlide,
+    title: "Designer UI/UX",
+    subtitle: "Interfaces modernas, intuitivas e centradas no usuário.",
+  },
+  {
+    id: 2,
     image: heroSlide1,
     title: "Desenvolvedor que Transforma Ideias em Experiências",
     subtitle:
       "Full Stack Developer · UI/UX Designer · Criando soluções digitais que conectam pessoas e negócios.",
-  },
-  {
-    id: 2,
-    image: heroSlide,
-    title: "Designer UI/UX",
-    subtitle: "Interfaces modernas, intuitivas e centradas no usuário.",
   },
   {
     id: 3,
