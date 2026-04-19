@@ -4,19 +4,28 @@ import Autoplay from "embla-carousel-autoplay";
 import { ChevronLeft, ChevronRight, Play, Info } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import heroSlide from "@/assets/hero-slide.png";
+import heroSlide1 from "@/assets/hero-slide-1.png";
 
-const slides = Array.from({ length: 5 }, (_, i) => ({
-  id: i + 1,
-  image: heroSlide,
-  title: ["Desenvolvedor Full Stack", "Designer UI/UX", "Soluções Digitais", "Do Design ao Deploy", "Transformando Ideias"][i],
-  subtitle: [
-    "Transformando ideias em soluções digitais de alta performance.",
-    "Interfaces modernas, intuitivas e centradas no usuário.",
-    "Aplicações escaláveis com tecnologia de ponta.",
-    "Fluxo completo: design, código e entrega contínua.",
-    "Vamos construir algo incrível juntos.",
-  ][i],
-}));
+const slides = [
+  {
+    id: 1,
+    image: heroSlide1,
+    title: "Desenvolvedor que Transforma Ideias em Experiências",
+    subtitle:
+      "Full Stack Developer · UI/UX Designer · Criando soluções digitais que conectam pessoas e negócios.",
+  },
+  ...Array.from({ length: 4 }, (_, i) => ({
+    id: i + 2,
+    image: heroSlide,
+    title: ["Designer UI/UX", "Soluções Digitais", "Do Design ao Deploy", "Transformando Ideias"][i],
+    subtitle: [
+      "Interfaces modernas, intuitivas e centradas no usuário.",
+      "Aplicações escaláveis com tecnologia de ponta.",
+      "Fluxo completo: design, código e entrega contínua.",
+      "Vamos construir algo incrível juntos.",
+    ][i],
+  })),
+];
 
 export function HeroCarousel() {
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true }, [
