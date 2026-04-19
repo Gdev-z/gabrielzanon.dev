@@ -1,4 +1,4 @@
-import { ArrowUpRight, Code2, Palette, ShoppingCart, Smartphone, Sparkles } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 import project1 from "@/assets/project-1.jpg";
 
 const projects = [
@@ -7,17 +7,16 @@ const projects = [
     title: "Sovereign Strategy",
     description: "Landing page premium para consultoria de patrimônio, com design responsivo e identidade sofisticada em dark mode.",
     tags: ["Next.js", "Tailwind", "Responsive"],
-    icon: Sparkles,
     className: "md:col-span-2 md:row-span-2",
     gradient: "from-primary/30 via-primary/10 to-transparent",
     image: project1,
+    link: "https://github.com/Gdev-z/sovereign-strategy-refined",
   },
   {
     id: 2,
     title: "E-commerce",
     description: "Loja online com checkout otimizado e integração de pagamentos.",
     tags: ["Next.js", "Stripe"],
-    icon: ShoppingCart,
     className: "md:col-span-1",
     gradient: "from-chart-2/30 via-chart-2/10 to-transparent",
   },
@@ -26,7 +25,6 @@ const projects = [
     title: "Design System",
     description: "Biblioteca de componentes reutilizáveis e tokens semânticos.",
     tags: ["Storybook", "Figma"],
-    icon: Palette,
     className: "md:col-span-1",
     gradient: "from-chart-4/30 via-chart-4/10 to-transparent",
   },
@@ -35,7 +33,6 @@ const projects = [
     title: "App Mobile",
     description: "Aplicativo cross-platform com experiência nativa fluida.",
     tags: ["React Native", "Expo"],
-    icon: Smartphone,
     className: "md:col-span-1",
     gradient: "from-chart-3/30 via-chart-3/10 to-transparent",
   },
@@ -44,7 +41,6 @@ const projects = [
     title: "API & Backend",
     description: "Arquitetura escalável com APIs REST e GraphQL, banco de dados otimizado.",
     tags: ["Node.js", "PostgreSQL", "GraphQL"],
-    icon: Code2,
     className: "md:col-span-2",
     gradient: "from-chart-5/30 via-chart-5/10 to-transparent",
   },
@@ -68,7 +64,6 @@ export function ProjectsBento() {
 
         <div className="grid auto-rows-[14rem] grid-cols-1 gap-4 md:grid-cols-3 md:gap-6">
           {projects.map((project) => {
-            const Icon = project.icon;
             return (
               <article
                 key={project.id}
@@ -89,13 +84,22 @@ export function ProjectsBento() {
                 <div className="absolute -right-16 -top-16 h-48 w-48 rounded-full bg-foreground/5 blur-3xl transition-all duration-700 group-hover:scale-150" />
 
                 <div className="relative z-10 flex h-full flex-col justify-between">
-                  <div className="flex items-start justify-between">
-                    <div className="rounded-2xl border border-foreground/10 bg-background/40 p-3 backdrop-blur-sm">
-                      <Icon className="h-6 w-6 text-foreground" />
-                    </div>
-                    <div className="rounded-full border border-foreground/10 bg-background/40 p-2 backdrop-blur-sm transition-all duration-500 group-hover:rotate-45 group-hover:border-foreground/30">
-                      <ArrowUpRight className="h-4 w-4 text-foreground" />
-                    </div>
+                  <div className="flex items-start justify-end">
+                    {project.link ? (
+                      <a
+                        href={project.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label={`Abrir projeto ${project.title} no GitHub`}
+                        className="rounded-full border border-foreground/10 bg-background/40 p-2 backdrop-blur-sm transition-all duration-500 group-hover:rotate-45 group-hover:border-foreground/30"
+                      >
+                        <ArrowUpRight className="h-4 w-4 text-foreground" />
+                      </a>
+                    ) : (
+                      <div className="rounded-full border border-foreground/10 bg-background/40 p-2 backdrop-blur-sm transition-all duration-500 group-hover:rotate-45 group-hover:border-foreground/30">
+                        <ArrowUpRight className="h-4 w-4 text-foreground" />
+                      </div>
+                    )}
                   </div>
 
                   <div className="space-y-3">
