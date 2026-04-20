@@ -1,5 +1,6 @@
 import { ArrowUpRight } from "lucide-react";
 import project1 from "@/assets/project-1.jpg";
+import projectMario from "@/assets/project-mario.jpg";
 
 const projects = [
   {
