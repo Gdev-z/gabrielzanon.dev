@@ -67,16 +67,19 @@ const projects = [
   },
 ];
 
-function shuffle<T>(arr: T[]): T[] {
-  const a = [...arr];
-  for (let i = a.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [a[i], a[j]] = [a[j], a[i]];
-  }
-  if (a.every((v, i) => v === arr[i]) && a.length > 1) {
-    [a[0], a[1]] = [a[1], a[0]];
-  }
-  return a;
+// Rotação fixa entre os slots do bento grid.
+// Índices dos slots: 0 = principal, 1 = sup. direito, 2 = meio direito,
+// 3 = inferior direito (secundário), 4 = inferior esquerdo.
+// Ciclo desejado: 0 → 4 → 3 → 2 → 1 → 0
+function rotate<T>(arr: T[]): T[] {
+  if (arr.length < 5) return arr;
+  const next = [...arr];
+  next[4] = arr[0]; // principal vai para inferior esquerdo
+  next[3] = arr[4]; // inferior esquerdo vai para inferior direito (secundário)
+  next[2] = arr[3]; // secundário vai para o meio direito
+  next[1] = arr[2]; // meio direito vai para superior direito
+  next[0] = arr[1]; // superior direito vai para o principal
+  return next;
 }
 
 export function ProjectsBento() {
@@ -84,7 +87,7 @@ export function ProjectsBento() {
   const [order, setOrder] = useState(projects);
 
   const reshuffle = useCallback(() => {
-    setOrder((prev) => shuffle(prev));
+    setOrder((prev) => rotate(prev));
   }, []);
 
   useEffect(() => {
