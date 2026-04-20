@@ -1,5 +1,6 @@
 import { ArrowUpRight } from "lucide-react";
 import project1 from "@/assets/project-1.jpg";
+import projectMario from "@/assets/project-mario.jpg";
 
 const projects = [
   {
@@ -14,35 +15,43 @@ const projects = [
   },
   {
     id: 2,
-    title: "E-commerce",
-    description: "Loja online com checkout otimizado e integração de pagamentos.",
-    tags: ["Next.js", "Stripe"],
+    title: "Mario Brothers",
+    description: "Landing page temática dos irmãos encanadores Mario e Luigi, com visual divertido e CTA de contato.",
+    tags: ["HTML", "CSS", "JavaScript"],
     className: "md:col-span-1",
     gradient: "from-chart-2/30 via-chart-2/10 to-transparent",
+    image: projectMario,
+    link: "https://gdev-z.github.io/Mario-Brothers/",
   },
   {
     id: 3,
-    title: "Design System",
-    description: "Biblioteca de componentes reutilizáveis e tokens semânticos.",
-    tags: ["Storybook", "Figma"],
+    title: "Mario Brothers",
+    description: "Landing page temática dos irmãos encanadores Mario e Luigi, com visual divertido e CTA de contato.",
+    tags: ["HTML", "CSS", "JavaScript"],
     className: "md:col-span-1",
     gradient: "from-chart-4/30 via-chart-4/10 to-transparent",
+    image: projectMario,
+    link: "https://gdev-z.github.io/Mario-Brothers/",
   },
   {
     id: 4,
-    title: "App Mobile",
-    description: "Aplicativo cross-platform com experiência nativa fluida.",
-    tags: ["React Native", "Expo"],
+    title: "Mario Brothers",
+    description: "Landing page temática dos irmãos encanadores Mario e Luigi, com visual divertido e CTA de contato.",
+    tags: ["HTML", "CSS", "JavaScript"],
     className: "md:col-span-1",
     gradient: "from-chart-3/30 via-chart-3/10 to-transparent",
+    image: projectMario,
+    link: "https://gdev-z.github.io/Mario-Brothers/",
   },
   {
     id: 5,
-    title: "API & Backend",
-    description: "Arquitetura escalável com APIs REST e GraphQL, banco de dados otimizado.",
-    tags: ["Node.js", "PostgreSQL", "GraphQL"],
+    title: "Mario Brothers",
+    description: "Landing page temática dos irmãos encanadores Mario e Luigi, com visual divertido e CTA de contato.",
+    tags: ["HTML", "CSS", "JavaScript"],
     className: "md:col-span-2",
     gradient: "from-chart-5/30 via-chart-5/10 to-transparent",
+    image: projectMario,
+    link: "https://gdev-z.github.io/Mario-Brothers/",
   },
 ];
 
