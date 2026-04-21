@@ -78,7 +78,7 @@ export function ProjectsBento() {
           </h2> 
           <p className="mt-4 text-base text-foreground/70 md:text-lg">
             Uma seleção de trabalhos que combinam design pensado com código de qualidade.
-          </p>
+          </p> 
         </div>
 
         <div className="grid auto-rows-[14rem] grid-cols-1 gap-4 md:grid-cols-3 md:gap-6">
