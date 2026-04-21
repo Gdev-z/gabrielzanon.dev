@@ -12,7 +12,7 @@ const slides = [
   {
     id: 1,
     image: heroSlide,
-    title: "Designer UI/UX",
+    title: "Criando o futuro digital da sua empresa",
     subtitle: "Interfaces modernas, intuitivas e centradas no usuário.",
   },
   {
@@ -25,7 +25,7 @@ const slides = [
   {
     id: 3,
     image: heroSlide3,
-    title: "Código que Respira Design",
+    title: "",
     subtitle:
       "Frontend Developer · Design System Lover · Onde pixels e lógica se encontram.",
   },
@@ -57,7 +57,7 @@ export function HeroCarousel() {
   }, [emblaApi]);
 
   return (
-    <section className="relative h-screen w-full overflow-hidden bg-background">
+    <section className="relative h-screen w-full overflow-hidden bg-background select-none">
       <div ref={emblaRef} className="h-full overflow-hidden">
         <div className="flex h-full">
           {slides.map((slide) => (
@@ -92,10 +92,17 @@ export function HeroCarousel() {
                       {slide.subtitle}
                     </p>
                     <div className="flex flex-wrap gap-3 pt-2">
-                      <Button size="lg" className="gap-2 bg-foreground text-background hover:bg-foreground/90">
-                        <Play className="h-5 w-5 fill-current" />
-                        Ver Projetos
-                      </Button>
+                      <a
+                        href="https://github.com/Gdev-z/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-block" // Garante que o link tenha o tamanho do botão
+                      >
+                        <Button size="lg" className="gap-2 bg-foreground text-background hover:bg-foreground/90 cursor-pointer">
+                          <Play className="h-5 w-5 fill-current" />
+                          Quero tirar minha ideia do papel
+                        </Button>
+                      </a>
                       <Button
                         size="lg"
                         variant="secondary"
@@ -113,20 +120,20 @@ export function HeroCarousel() {
         </div>
       </div>
 
-      <button
+      {/*<button
         onClick={scrollPrev}
         aria-label="Slide anterior"
         className="group absolute left-4 top-1/2 z-20 hidden -translate-y-1/2 rounded-full bg-background/30 p-3 backdrop-blur-md transition hover:bg-background/60 md:block"
       >
         <ChevronLeft className="h-6 w-6 text-foreground transition group-hover:scale-110" />
       </button>
-      <button
+       <button
         onClick={scrollNext}
         aria-label="Próximo slide"
         className="group absolute right-4 top-1/2 z-20 hidden -translate-y-1/2 rounded-full bg-background/30 p-3 backdrop-blur-md transition hover:bg-background/60 md:block"
       >
         <ChevronRight className="h-6 w-6 text-foreground transition group-hover:scale-110" />
-      </button>
+      </button> */}
 
       <div className="absolute bottom-8 left-1/2 z-20 flex -translate-x-1/2 gap-2">
         {slides.map((_, i) => (

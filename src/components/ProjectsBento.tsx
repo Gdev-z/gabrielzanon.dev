@@ -96,7 +96,7 @@ export function ProjectsBento() {
                     : { duration: 0 } // No mobile, a transição é instantânea
                 }
                 onClick={handleCardClick}
-                className={`group relative cursor-pointer overflow-hidden rounded-3xl border border-foreground/10 bg-foreground/[0.03] p-6 md:p-8 ${slotClass}`}
+                className={`group relative overflow-hidden rounded-3xl border border-foreground/10 bg-foreground/[0.03] p-6 md:p-8 ${slotClass}`}
               >
                 {/* Background e Imagens */}
                 {project.image && (
@@ -112,7 +112,14 @@ export function ProjectsBento() {
                 <div className="relative z-10 flex h-full flex-col justify-between">
                   <div className="flex items-start justify-end">
                     <div className="rounded-full border border-foreground/10 bg-background/40 p-2 backdrop-blur-sm transition-transform group-hover:rotate-45">
-                      <ArrowUpRight className="h-4 w-4 text-foreground" />
+                      <a
+                        href={project.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        onClick={(e) => e.stopPropagation()} // Impede o reshuffle ao clicar no link
+                      >
+                        <ArrowUpRight className="h-4 w-4 text-foreground" />
+                      </a>
                     </div>
                   </div>
 
