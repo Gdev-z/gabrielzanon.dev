@@ -1,9 +1,9 @@
 import { Github, Linkedin, Mail, ArrowUpRight } from "lucide-react";
 
 const socials = [
-  { label: "LinkedIn", href: "#", icon: Linkedin },
-  { label: "GitHub", href: "#", icon: Github },
-  { label: "Email", href: "#", icon: Mail },
+  { label: "LinkedIn", href: "https://github.com/Gdev-z/sovereign-strategy-refined", icon: Linkedin },
+  { label: "GitHub", href: "https://github.com/Gdev-z", icon: Github },
+  { label: "Email", href: "mailto:gabrielzanon.dev@gmail.com", icon: Mail },
 ];
 
 const secondary = [

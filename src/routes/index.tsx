@@ -5,6 +5,7 @@ import { ProjectsBento } from "@/components/ProjectsBento";
 import { About } from "@/components/About";
 import { Contact } from "@/components/Contact";
 import { Footer } from "@/components/Footer";
+import { Automations } from "@/components/Automations";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -26,8 +27,9 @@ function Index() {
       <div id="inicio">
         <HeroCarousel />
       </div>
-        <ProjectsBento />
         <About />
+        <ProjectsBento />
+        <Automations />
         <Contact />
         <Footer />
     </main>

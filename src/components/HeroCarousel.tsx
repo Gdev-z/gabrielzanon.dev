@@ -18,16 +18,16 @@ const slides = [
   {
     id: 2,
     image: heroSlide1,
-    title: "Desenvolvedor que Transforma Ideias em Experiências",
+    title: "Desenvolvedor Full Stack",
     subtitle:
-      "Full Stack Developer · UI/UX Designer · Criando soluções digitais que conectam pessoas e negócios.",
+      "Criando soluções digitais que conectam pessoas e negócios.",
   },
   {
     id: 3,
     image: heroSlide3,
-    title: "",
+    title: "Visuais Chamativos",
     subtitle:
-      "Frontend Developer · Design System Lover · Onde pixels e lógica se encontram.",
+      "Deixe de falar e comece a Mostrar",
   },
   {
     id: 4,
@@ -93,8 +93,8 @@ export function HeroCarousel() {
                     </p>
                     <div className="flex flex-wrap gap-3 pt-2">
                       <a
-                        href="https://github.com/Gdev-z/"
-                        target="_blank"
+                        href="#contato"
+                        // target="_blank"
                         rel="noopener noreferrer"
                         className="inline-block" // Garante que o link tenha o tamanho do botão
                       >

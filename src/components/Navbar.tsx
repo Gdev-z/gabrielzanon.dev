@@ -13,7 +13,7 @@ const navItems: NavItem[] = [
   { label: "Início", href: "#inicio" },
   { label: "Projetos", href: "#projetos" },
   { label: "Sobre", href: "#sobre" },
-  { label: "Contato", href: "#contato", soon: true },
+  { label: "Contato", href: "#contato" },
 ];
 
 export function Navbar() {
@@ -97,7 +97,7 @@ export function Navbar() {
         <div className="flex items-center gap-2">
           <a
             href="#contato"
-            onClick={(e) => e.preventDefault()}
+            // onClick={(e) => e.preventDefault()}
             className="hidden rounded-full border border-foreground/15 bg-foreground/5 px-4 py-2 text-xs font-semibold uppercase tracking-wider text-foreground/80 backdrop-blur-sm transition-all duration-300 hover:border-foreground/30 hover:bg-foreground/10 hover:text-foreground md:inline-flex"
           >
             Vamos conversar

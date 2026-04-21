@@ -3,6 +3,9 @@ import { motion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
 import project1 from "@/assets/project-1.jpg";
 import projectMario from "@/assets/project-mario.jpg";
+import project3 from "@/assets/Project-3-Consorcio.jpg"
+import project4 from "@/assets/Project-4-Barbearia.jpg"
+import project5 from "@/assets/portfolio-5-Advocacia.jpg"
 
 const STANDARD_GRADIENT = "from-primary/30 via-primary/10 to-transparent";
 const slots = [
@@ -14,11 +17,11 @@ const slots = [
 ];
 
 const projects = [
-  { id: 1, title: "Sovereign Strategy", description: "Landing page premium...", tags: ["Next.js", "Tailwind"], gradient: "from-primary/30", image: project1, link: "#" },
-  { id: 2, title: "Mario Brothers", description: "Visual divertido...", tags: ["HTML", "CSS"], gradient: "from-chart-2/30", image: projectMario, link: "#" },
-  { id: 3, title: "Mario Brothers 3", description: "Visual divertido...", tags: ["HTML", "CSS"], gradient: "from-chart-4/30", image: projectMario, link: "#" },
-  { id: 4, title: "Mario Brothers 4", description: "Visual divertido...", tags: ["HTML", "CSS"], gradient: "from-chart-3/30", image: projectMario, link: "#" },
-  { id: 5, title: "Mario Brothers 5", description: "Visual divertido...", tags: ["HTML", "CSS"], gradient: "from-chart-5/30", image: projectMario, link: "#" },
+  { id: 1, title: "Estratégista de Vendas", description: "Landing page premium...", tags: ["Next.js", "Tailwind"], gradient: "from-primary/30", image: project1, link: "https://gdev-z.github.io/sovereign-strategy-refined/" },
+  { id: 2, title: "Mario Brothers", description: "Visual divertido...", tags: ["HTML", "CSS"], gradient: "from-chart-2/30", image: projectMario, link: "https://gdev-z.github.io/Mario-Brothers/" },
+  { id: 3, title: "Consórcio", description: "Mostre aos seus cliente quem você é...", tags: ["Typescript", "Tailwind"], gradient: "from-chart-4/30", image: project3, link: "https://gdev-z.github.io/elite-wealth-builder/" },
+  { id: 4, title: "Barbearia", description: "Seu Cliente veem os cortes..", tags: ["HTML", "CSS"], gradient: "from-chart-3/30", image: project4, link: "https://barbearia-vitrine.vercel.app/" },
+  { id: 5, title: "Advocacia", description: "A Advocacia que presta serviços jurídicos com excelente qualidade", tags: ["HTML", "CSS"], gradient: "from-chart-5/30", image: project5, link: "https://advocaciaflaviafantim.netlify.app/" },
 ];
 
 // Lógica de rotação corrigida para evitar sobreposição de dados
@@ -111,16 +114,16 @@ export function ProjectsBento() {
                 {/* Conteúdo do Card */}
                 <div className="relative z-10 flex h-full flex-col justify-between">
                   <div className="flex items-start justify-end">
-                    <div className="rounded-full border border-foreground/10 bg-background/40 p-2 backdrop-blur-sm transition-transform group-hover:rotate-45">
                       <a
                         href={project.link}
                         target="_blank"
                         rel="noopener noreferrer"
                         onClick={(e) => e.stopPropagation()} // Impede o reshuffle ao clicar no link
                       >
+                    <div className="rounded-full border border-foreground/10 bg-background/40 p-2 backdrop-blur-sm transition-transform group-hover:rotate-45">
                         <ArrowUpRight className="h-4 w-4 text-foreground" />
-                      </a>
                     </div>
+                      </a>
                   </div>
 
                   {/* Informações: Somente visíveis se for o card principal ou mobile */}

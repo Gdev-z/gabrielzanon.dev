@@ -43,9 +43,9 @@ export function About() {
           transition={{ duration: 0.7, ease: [0.4, 0, 0.2, 1], delay: 0.1 }}
           className="mb-12 text-balance text-4xl font-black leading-[1.05] tracking-tight text-foreground md:mb-16 md:text-6xl lg:text-7xl"
         >
-          Código que se{" "}
+          Entendo{" "}
           <span className="bg-gradient-to-r from-foreground via-foreground to-foreground/40 bg-clip-text text-transparent">
-            sente.
+            o
           </span>
           <br />
           Design que{" "}
@@ -68,7 +68,7 @@ export function About() {
               </div>
               <div className="h-px w-8 bg-foreground/30" />
               <div className="pt-2 text-xs font-medium text-foreground/50">
-                Manifesto
+                Sobre
               </div>
             </div>
           </motion.div>
