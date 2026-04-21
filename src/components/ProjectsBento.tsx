@@ -75,7 +75,7 @@ export function ProjectsBento() {
           </span>
           <h2 className="text-4xl font-black leading-[1.05] tracking-tight text-foreground md:text-5xl lg:text-6xl">
             Projetos em <span className="bg-yellow-400 text-black px-2 inline-block">destaque</span>
-          </h2>
+          </h2> 
           <p className="mt-4 text-base text-foreground/70 md:text-lg">
             Uma seleção de trabalhos que combinam design pensado com código de qualidade.
           </p>
