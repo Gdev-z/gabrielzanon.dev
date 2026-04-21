@@ -36,12 +36,7 @@ const slides = [
     subtitle:
       "E-commerce Developer · Integrações de Pagamento · Soluções escaláveis para vender mais.",
   },
-  {
-    id: 5,
-    image: heroSlide,
-    title: "Transformando Ideias",
-    subtitle: "Vamos construir algo incrível juntos.",
-  },
+  
 ];
 
 export function HeroCarousel() {
