@@ -1,11 +1,12 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import { RouterProvider, createRouter } from '@tanstack/react-router'
-import { routeTree } from './routeTree.gen'
-import './styles.css' // Importante para o Tailwind carregar
+import { RouterProvider } from '@tanstack/react-router'
+// Importe a função getRouter do arquivo onde você a definiu
+import { getRouter } from './router' 
+import './styles.css'
 
-// Cria a instância do roteador
-const router = createRouter({ routeTree })
+// Use a função que contém o basepath: '/gabrielzanon.dev'
+const router = getRouter()
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
