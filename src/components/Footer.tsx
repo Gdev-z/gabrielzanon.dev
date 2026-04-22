@@ -1,7 +1,7 @@
 import { Github, Linkedin, Mail, ArrowUpRight } from "lucide-react";
 
 const socials = [
-  { label: "LinkedIn", href: "https://github.com/Gdev-z/sovereign-strategy-refined", icon: Linkedin },
+  { label: "LinkedIn", href: "https://www.linkedin.com/in/gabriel-antonio-zanon/", icon: Linkedin },
   { label: "GitHub", href: "https://github.com/Gdev-z", icon: Github },
   { label: "Email", href: "mailto:gabrielzanon.dev@gmail.com", icon: Mail },
 ];
