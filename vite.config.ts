@@ -1,23 +1,18 @@
-// @lovable.dev/vite-tanstack-config already includes the following — do NOT add them manually
-// or the app will break with duplicate plugins:
-//   - tanstackStart, viteReact, tailwindcss, tsConfigPaths, cloudflare (build-only),
-//     componentTagger (dev-only), VITE_* env injection, @ path alias, React/TanStack dedupe,
-//     error logger plugins, and sandbox detection (port/host/strictPort).
-// You can pass additional config via defineConfig({ vite: { ... } }) if needed.
 import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
-import { TanStackRouterVite } from '@tanstack/router-plugin/vite'
 import path from 'path'
+import tailwindcss from '@tailwindcss/vite'
 
 export default defineConfig({
-  base: '/gabrielzanon.dev/', // Fundamental para o GitHub Pages
+  // Mantenha a base para garantir que o CSS seja buscado na pasta correta no GitHub
+  base: '/gabrielzanon.dev', 
   plugins: [
-    TanStackRouterVite(),
-    react()
+     tailwindcss() /* outros plugins */
+    // Se o seu ambiente Lovable já injeta os plugins, remova-os daqui.
+    // Se você mudou para um projeto Vite puro, mantenha apenas o necessário.
   ],
   resolve: {
     alias: {
-      "@": path.resolve(__dirname, "./src"), // Mantém os imports do seu template funcionando
+      "@": path.resolve(__dirname, "./src"),
     },
   },
 })
