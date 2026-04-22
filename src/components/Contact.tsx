@@ -42,7 +42,7 @@ export function Contact() {
           className="text-balance text-center text-4xl font-bold leading-[1.05] tracking-tight text-foreground md:text-6xl lg:text-7xl"
         >
           Vamos transformar sua{" "}
-          <span className="bg-gradient-to-r from-primary via-primary/80 to-primary/40 bg-clip-text text-transparent">
+          <span className="animate-gradient-flow bg-[linear-gradient(90deg,oklch(0.7_0.2_70),oklch(0.75_0.18_20),oklch(0.8_0.15_200),oklch(0.7_0.2_270))] bg-clip-text text-transparent">
             ideia em realidade
           </span>
           .
